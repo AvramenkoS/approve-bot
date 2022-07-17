@@ -20,6 +20,7 @@ router.post('/send', async (req, res) => {
         const {order, symbol1, sum1, symbol2, network2, sum2, wallet} = req.body
 
         bot.on('message', msg => {
+            console.log(msg)
             bot.sendMessage(chatIdGroup, `Approve Deal`, approveOptions)
         })
 
